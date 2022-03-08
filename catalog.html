@@ -59,7 +59,7 @@
             <h1 class="inner-header-title">Гостиницы Седоны</h1>
             <ul class="breadcrumbs">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link breadcrumbs-link-icon" href="index.html">Главная</a>
+                <a class="breadcrumbs-link breadcrumbs-link-icon" href="index.html"></a>
               </li>
               <li class="breadcrumbs-item">
                 <a class="breadcrumbs-link" href="#">Гостиницы</a>
@@ -73,7 +73,7 @@
               <fieldset class="catalog-filter-group">
                 <legend class="catalog-filter-title">Инфраструктура:</legend>
                 <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item filter-item-pool">
+                  <li class="catalog-filter-item ">
                     <label class="control">
                       <input class="visually-hidden control-input" type="checkbox" id="pool"
                         name="select-infrastructure" checked>
@@ -81,7 +81,7 @@
                       <span class="control-label">Бассейн</span>
                     </label>
                   </li>
-                  <li class="catalog-filter-item filter-item-parking">
+                  <li class="catalog-filter-item ">
                     <label class="control">
                       <input class="visually-hidden control-input" type="checkbox" id="parking"
                         name="select-infrastructure" checked>
@@ -89,7 +89,7 @@
                       <span class="control-label">Парковка</span>
                     </label>
                   </li>
-                  <li class="catalog-filter-item filter-item-wi-fi">
+                  <li class="catalog-filter-item">
                     <label class="control">
                       <input class="visually-hidden control-input" type="checkbox" id="wi-fi"
                         name="select-infrastructure">
@@ -135,10 +135,12 @@
                   <div class="range-wrapper-inputs">
                     <label class="catalog-filter-label">
                       <input class="range-input" type="number" name="min-price" value="0">
+                      <span class="min-number">от</span>
                     </label>
 
                     <label class="catalog-filter-label">
-                      <input class="range-input" type="number" name="max-price" value="9000" placeholder="до">
+                      <input class="range-input" type="number" name="max-price" value="9000">
+                      <span class="max-number">до</span>
                     </label>
                   </div>
                   <div class="range-scale">
@@ -185,31 +187,33 @@
           </form>
 
           <form class="modes" action="https://echo.htmlacademy.ru/" method="get">
-
-            <input class="mode-tile" type="radio" name="select-mode" value="mode-tile" cheched>
-            <label class="modes-control">
+          <div class="mode-radio">
+            <input type="radio" id="tile" name="select-mode" value="mode-tile" cheched>
+            <label for="tile">
               <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"
                   fill="#000" />
               </svg>
             </label>
-
-            <input class="mode-slideshow" type="radio" name="select-mode" value="mode-slideshow">
-            <label class="modes-control">
+         
+         
+            <input type="radio" id="slideshow" name="select-mode" value="mode-slideshow">
+            <label for="slideshow">
               <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000" />
               </svg>
             </label>
-
-            <input class="mode-list" type="radio" name="select-mode" value="mode-list">
-            <label class="modes-control">
+         
+            
+            <input class="mode" type="radio" id="list" name="select-mode" value="mode-list">
+            <label for="list">
               <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"
                   fill="#000" />
               </svg>
             </label>
-            </label>
+          </div>
           </form>
         </div>
 
@@ -229,10 +233,10 @@
             <a class="button hotel-button-detail" href="#">подробнее</a>
             <a class="button hotel-button-chosen" href="#">в избранное</a>
             <div class="hotel-star-rating">
-              <span class="star star_four">4 звезды</span>
+              <span class="star star_four"></span>
               <span class="rating">рейтинг: 8,5</span>
             </div>
-          </li> 
+          </li>
 
           <li class="hotel-card">
             <a class="hotel-card-image-link" href="#">
@@ -247,7 +251,7 @@
             <a class="button hotel-button-detail" href="#">подробнее</a>
             <a class="button hotel-button-chosen" href="#">в избранное</a>
             <div class="hotel-star-rating">
-              <span class="star star_three">3 звезды</span>
+              <span class="star star_three"></span>
               <span class="rating">рейтинг: 8,9</span>
             </div>
           </li>
@@ -265,7 +269,7 @@
             <a class="button hotel-button-detail" href="#">подробнее</a>
             <a class="button hotel-button-chosen-successful" href="#">в избранное</a>
             <div class="hotel-star-rating">
-              <span class="star-star_two">2 звезды</span>
+              <span class="star star_two"></span>
               <span class="rating">рейтинг: 9,2</span>
             </div>
           </li>
@@ -283,7 +287,7 @@
             <a class="button hotel-button-detail" href="#">подробнее</a>
             <a class="button hotel-button-chosen" href="#">в избранное</a>
             <div class="hotel-star-rating">
-              <span class="star star-two">2 звезды</span>
+              <span class="star star_two"></span>
               <span class="rating">рейтинг: 9.2</span>
             </div>
           </li>
