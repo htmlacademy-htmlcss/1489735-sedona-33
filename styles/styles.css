@@ -896,134 +896,204 @@ body {
     color: #000000;
 }
 
-.modal-hotel-form {
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.modal-form .field-group {
     margin: 0;
 }
 
 .field-group {
-    display: grid;
-    grid-template-columns: 137px 133px 114px 133px;
-    grid-template-rows: 50px 30px ;
-    grid-gap: 1px 18px;
-    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.field-date-arrival .form-label {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
+.childs {
+    width: 100px;
+}
+
+.form-label {
     width: 155px;
     font-family: "PT Sans", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 40px;
     color: #000000;
-    border: none;
 }
 
-.field-date-arrival .field {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1; 
-    background-color: #f2f2f2; 
-    font-family: "PT Sans", sans-serif;
+.modal-form-field {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 420px;
+    padding: 4px 5px;
+    font-family: inherit;
     font-weight: 700;
     font-size: 18px;
     line-height: 40px;
-    align-items: center;    
-    color: #000000; 
-    border: none;    
+    align-items: center;
+    color: #000000;
+    opacity: 0.6;
+    background-color: #F2F2F2;
+    border-radius: 4px;
+    border: none;
+}
+
+.modal-form-field::after {
+    content:"";
+    display: block;
+    position: absolute;
+    background-image:url("../image/date.svg");
+    background-repeat:no-repeat;
+    width: 15px;
+    height: 15px;
+    top: 10px;
+    right:18px;
+}
+
+.modal-form-field:hover {
+    background-color: #E6E6E6
+}
+
+.modal-form-field:active {
+    color: #000000;
+    background-color: #FFFFFF;
+    outline: 2px solid #000000;
+}
+
+.modal-form-field:focus {
+    background-color: #E6E6E6;
+    outline: 3px solid #83B3D3;
+}
+
+.tooltip {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.tooltip-toggle {
+    display: block;
+    border: none;
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-bottom: 6px;
+    background-color: #83B3D3;
+    border-radius: 50%;
+}
+
+.tooltip-toggle:after {
+    content: "";
+    position: absolute;
+    background-image: url("../image/info.svg");
+    width: 1px;
+    height: 9px;
+    top: 18px;
+    left: 21px;
+}
+
+.tooltip-text {
+    display: block;
+    width: 256px;
+    font: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #333333;
+    border-radius: 10px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+    text-transform: none;
+    padding: 15px 18px 18px 22px;
+    position: absolute;
+    top: 100%;
+    margin-top: 9px;
+    transform: translateX(-48%);
+    left: 50%;
+    z-index: 1;
+    /*display: none;*/
+}
+
+.tooltip-text:after{
+    content: "";
+    background-image: url("../image/tooltip-arrow.svg");
+    width: 19px;
+    height: 9px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .modal-error-message {
-    grid-column: 2 / -1;
-    grid-row: 2 / -1;
+    margin-left: 155px;
+    margin-bottom: 11px;
+    width: 420px;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 40px;
+    line-height: 30px;
     align-items: center;
     color: #FF5757;
-    border: none;
-}
-
-.field-date-departure .form-label {
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    width: 155px;
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 40px;
-    color: #000000;
-    border: none;
-}
-
-.field-date-departure .field  {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1; 
-    background-color: #f2f2f2; 
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 40px;
-    align-items: center;    
-    color: #000000;  
-    border: none;   
 }
 
 .modal-succes-message {
-    grid-column: 2 / -1;
-    grid-row: 2 / -1;
+    width: 420px;
+    margin-left: 155px;
+    margin-bottom: 11px;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 40px;
+    line-height: 30px;
     align-items: center;
     color: #333333;
-    border: none;
 }
 
-.person .form-label{
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 40px;
-    color: #000000;
-    border: none;    
+.persons {
+    display: flex;
+    flex-direction: row;
 }
 
-.person .field {
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;  
-    font-family: "PT Sans", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 40px;
-    align-items: center;    
-    color: #000000;  
-    border: none;    
-}
 .number-person {
     background: #F2F2F2;
-    display: inline-block;
+    display: block;
     position: relative;
     width: 133px;
     border: none;
+    margin-bottom: 40px;
+}
+
+.adults {
     margin-right: 56px;
 }
 
-.number-person input[type="number"] {
-    display: block;
-    height: 50px;
-    line-height: 32px;
+.number-person input[type="text"] {
+    display: inline-block;
+    font-family: "PT Sans", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 40px;
+    align-items: center;
+    text-align: center;
+    color: #000000;
     width: 100%;
-    padding: 0;
+    padding: 5px 5px;
     margin: 0;
     background: #F2F2F2;
     box-sizing: border-box;
     border: none;
-    text-align: center;
     -moz-appearance: textfield;
     -webkit-appearance: textfield;
     appearance: textfield;
@@ -1036,7 +1106,7 @@ body {
 
 .number-minus {
     position: absolute;
-    top: 0px;
+    top: 2px;
     left: 0px;
     bottom: 10px;
     width: 44px;
@@ -1044,8 +1114,6 @@ body {
     display: block;
     text-align: center;
     border: none;
-    font-size: 16px;
-    font-weight: 600;
 }
 
 .number-plus {
@@ -1058,13 +1126,9 @@ body {
     display: block;
     text-align: center;
     border: none;
-    font-size: 16px;
-    font-weight: 600;
 }
 
 .modal-button {
-    grid-column: 1 /-1;
-    grid-row: 4 / -1;
     display: block;
     width: 575px;
     padding: 10px 10px;
@@ -1077,7 +1141,7 @@ body {
     color: #FFFFFF;
     background-color: #83B3D3;
     border-radius: 10px;
-    margin: 0 auto;
+    margin: 0;
 }
 
 .modal-button:hover {
@@ -1253,7 +1317,7 @@ body {
     border-radius: 4px;
 }
 
-.control-input[type="checkbox"]:checked + .control-mark::after {
+.control-input[type="checkbox"]:checked+.control-mark::after {
     position: absolute;
     top: 4px;
     left: 4px;
@@ -1264,11 +1328,11 @@ body {
     content: "";
 }
 
-.control-input[type="radio"] + .control-mark {
+.control-input[type="radio"]+.control-mark {
     border-radius: 50%;
 }
 
-.control-input[type="radio"]:checked + .control-mark::before {
+.control-input[type="radio"]:checked+.control-mark::before {
     position: absolute;
     top: 5px;
     left: 5px;
@@ -1284,7 +1348,8 @@ body {
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
-    color: #FFFFFF;;
+    color: #FFFFFF;
+    ;
 }
 
 .range-scale {
@@ -1367,7 +1432,7 @@ body {
     text-align: start;
     background-color: transparent;
     appearance: textfield;
-    border:none;
+    border: none;
 }
 
 .min-number {
@@ -1377,19 +1442,18 @@ body {
     font-size: 18px;
     line-height: 23px;
     text-align: right;
-    color: #FFFFFF; 
-    opacity: 0.3; 
+    color: #FFFFFF;
+    opacity: 0.3;
 }
 
 .max-number {
-    width: 145px;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 23px;
     text-align: right;
-    color: #FFFFFF; 
-    opacity: 0.3;  
+    color: #FFFFFF;
+    opacity: 0.3;
 }
 
 .catalog-filter-label:hover {
@@ -1559,7 +1623,7 @@ body {
     flex-wrap: wrap;
 }
 
-.mode-radio input[type="radio"]{
+.mode-radio input[type="radio"] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -1567,16 +1631,16 @@ body {
 }
 
 .mode-radio label {
-   display: inline-block; 
-   padding: 11px 14px;
-   cursor: pointer;
-   border: 2px solid #E6E6E6;
-   border-radius: 4px;
+    display: inline-block;
+    padding: 11px 14px;
+    cursor: pointer;
+    border: 2px solid #E6E6E6;
+    border-radius: 4px;
 }
 
 .mode-radio input[type="radio"]:checked+label {
     border: 2px solid #000000;
-    border-radius: 4px; 
+    border-radius: 4px;
 }
 
 .mode-radio label:hover {
@@ -1791,7 +1855,7 @@ body {
     width: 43px;
     background-repeat: repeat;
     background-size: 25px 17px;
-    margin-right: 90px;  
+    margin-right: 90px;
 }
 
 .rating {
@@ -1936,7 +2000,7 @@ body {
 .hotel-filter-pagination {
     width: 160px;
     margin: 0;
-    padding: 13px 12px 17px;
+    padding: 12px 17px;
     font-family: "PT Sans", sans-serif;
     font-weight: 400;
     font-size: 18px;
