@@ -398,7 +398,7 @@ body {
   margin-bottom: 20px;
 }
 
-.light {
+.advantages-title-light {
   color: #ffffff;
 }
 
@@ -415,7 +415,7 @@ body {
   margin-bottom: 29px;
 }
 
-.advantage-number .light {
+.advantage-number-light {
   color: #ffffff;
 }
 
@@ -431,7 +431,7 @@ body {
   color: #333333;
 }
 
-.advantages-description .light {
+.advantages-description-light {
   color: #ffffff;
 }
 
