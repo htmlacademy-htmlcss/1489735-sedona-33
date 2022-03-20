@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link rel="icon" type="type/png" href="../image/favicon-32х32.png">
+  <link rel="icon" type="image/png"  sizes="32 * 32" href="image/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -17,7 +17,7 @@
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
-            <a class="navigation-link  " href="index.html">Главная</a>
+            <a class="navigation-link" href="index.html">Главная</a>
           </li>
           <li class="navigation-item">
             <a class="navigation-link" href="#">О Седоне</a>
@@ -148,10 +148,10 @@
                   </div>
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 227px">
-                      <button class="range-toggle toggle-min">
+                      <button class="range-toggle toggle-min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
-                      <button class="range-toggle toggle-max">
+                      <button class="range-toggle toggle-max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
                     </div>
@@ -194,6 +194,7 @@
 
               <input type="radio" id="tile" name="select-mode" value="mode-tile" checked>
               <label for="tile">
+                <span class="visually-hidden">Вид плитка.</span>
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"
                     fill="#000" />
@@ -202,6 +203,7 @@
 
               <input type="radio" id="slideshow" name="select-mode" value="mode-slideshow">
               <label for="slideshow">
+                <span class="visually-hidden">Вид слайд.</span>
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z" fill="#000" />
                 </svg>
@@ -210,6 +212,7 @@
 
               <input class="mode" type="radio" id="list" name="select-mode" value="mode-list">
               <label for="list">
+                <span class="visually-hidden">Вид список</span> 
                 <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"
