@@ -378,7 +378,9 @@ body {
 .photo-1,
 .photo-2 {
   display: block;
-  width: 800px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .advantages-title {
