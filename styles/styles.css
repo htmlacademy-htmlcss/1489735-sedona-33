@@ -371,13 +371,16 @@ body {
   padding: 97px 87px 87px;
   background: #83b3d3;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
 .photo-1,
 .photo-2 {
   display: block;
-  width: 800px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .advantages-title {
@@ -593,7 +596,7 @@ body {
   padding: 94px 200px;
   background-color: #000000;
   background-image: url("../image/hotel/background_footer.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
